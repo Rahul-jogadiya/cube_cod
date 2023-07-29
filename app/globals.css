@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --bgColor: #020617;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,12 +20,20 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* body {
+  background: var(--bgColor);
+} */
+
+/* Utilities Classes */
+
+.h1 {
+  @apply text-blue-500 font-semibold mb-3;
+}
+
+.custom_btn {
+  @apply border-blue-500 text-zinc-400 font-normal duration-300;
+}
+
+.container {
+  @apply max-w-[1280px] mx-auto p-6;
 }
